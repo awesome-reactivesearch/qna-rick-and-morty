@@ -20,6 +20,26 @@
   border-radius: var(--bs-border-radius);
   padding: 5px 10px;
 }
+.heroSection {
+  height: 500px;
+  margin-top: -100px;
+  background-image: url(../public/rick-and-morty.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-color: lightcyan;
+  background-position: left bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchboxContainer {
+  position: relative;
+  width: 75vw;
+  max-width: 500px;
+}
+.searchboxContainer input {
+  line-height: 2.5;
+}
 .suggestions {
   position: absolute;
   z-index: 2;
