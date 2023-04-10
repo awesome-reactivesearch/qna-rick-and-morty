@@ -40,6 +40,10 @@
 .searchboxContainer input {
   line-height: 2.5;
 }
+.answer {
+  max-width: 800px;
+  margin: auto;
+}
 .suggestions {
   position: absolute;
   z-index: 2;
