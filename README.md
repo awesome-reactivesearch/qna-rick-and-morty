@@ -1,0 +1,1 @@
+# QnA rick and morty
