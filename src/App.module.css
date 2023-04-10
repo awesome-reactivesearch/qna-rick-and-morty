@@ -23,7 +23,7 @@
 .heroSection {
   height: 500px;
   margin-top: -100px;
-  background-image: url(./rick-and-morty.png);
+  background-image: url("./../public/rick-and-morty.png");
   background-size: auto;
   background-repeat: no-repeat;
   background-color: lightcyan;
