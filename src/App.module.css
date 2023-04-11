@@ -20,9 +20,12 @@
   border-radius: var(--bs-border-radius);
   padding: 5px 10px;
 }
-.heroSection {
-  height: 500px;
-  margin-top: -100px;
+.backgroundImage {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: -1;
   background-size: auto;
   background-repeat: no-repeat;
   background-color: lightcyan;
