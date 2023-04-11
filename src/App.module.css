@@ -73,7 +73,7 @@
 }
 .activeSuggestion,
 .activeSuggestion:hover {
-  background-color: var(--bs-primary);
+  background-color: #06b0c8;
   color: white;
   padding: 10px 15px;
   width: 100%;
