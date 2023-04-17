@@ -20,6 +20,10 @@
   border-radius: var(--bs-border-radius);
   padding: 5px 10px;
 }
+.list {
+  max-width: 800px;
+  margin: auto;
+}
 .backgroundImage {
   height: 100vh;
   width: 100vw;
