@@ -9,6 +9,7 @@ import questions from "./questions.json";
 
 import styles from "./App.module.css";
 import { useState } from "react";
+import getCharacterIcon from "./characterMap";
 
 const SEARCH_COMPONENT_ID = "SEARCH_COMPONENT";
 const AI_ANSWER_COMPONENT_ID = "AI_ANSWER";
@@ -204,12 +205,20 @@ function App() {
                 <div>
                   {feedData.hits.map((item) => (
                     <ListGroup.Item key={item.index} className="py-4 px-2">
-                      <h1 className="h5">
-                        {item.episode_name} - Season {item["season no."]} -
-                        Episode {item["episode no."]}
-                      </h1>
-                      <div>
-                        {item.name} says "{item.line}"
+                      <div className="row">
+                        <div className="col-md-1 d-flex justify-content-center align-items-center">
+                          <img
+                            src={getCharacterIcon(item.name)}
+                            style={{ width: 40 }}
+                          />
+                        </div>
+                        <div className="col-md-11">
+                          <h1 className="h5">
+                            {item.episode_name} - Season {item["season no."]} -
+                            Episode {item["episode no."]}
+                          </h1>
+                          <div>"{item.line}"</div>
+                        </div>
                       </div>
                     </ListGroup.Item>
                   ))}
