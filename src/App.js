@@ -44,7 +44,27 @@ function App() {
           ) {
             return {
               ...componentQuery,
-              sortOptions: [{ dataField: "index", sortBy: "asc" }],
+              sortField: "index_number",
+              sortOptions: [{ dataField: "index_number", sortBy: "asc" }],
+            };
+          }
+          if (
+            componentQuery.id === SEARCH_COMPONENT_ID &&
+            componentQuery.type === "search"
+          ) {
+            const searchQuery = componentQuery.value;
+            const matches = searchQuery.match(/in "(.*?)"\?$/);
+            const episode = matches && matches[1];
+
+            return {
+              ...componentQuery,
+              customQuery: {
+                query: {
+                  term: {
+                    "episode_name.keyword": episode,
+                  },
+                },
+              },
             };
           }
           return componentQuery;
@@ -71,7 +91,7 @@ function App() {
         </Container>
       </Navbar>
       <SearchBox
-        dataField={["episode_name", "name"]}
+        dataField={["episode_name", "name", "line"]}
         className={`mx-auto mt-2 ${styles.searchboxContainer}`}
         debounce={500}
         componentId={SEARCH_COMPONENT_ID}
