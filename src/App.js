@@ -217,7 +217,9 @@ function App() {
                             {item.episode_name} - Season {item["season no."]} -
                             Episode {item["episode no."]}
                           </h1>
-                          <div>"{item.line}"</div>
+                          <div>
+                            {item.name}: "{item.line}"
+                          </div>
                         </div>
                       </div>
                     </ListGroup.Item>
