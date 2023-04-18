@@ -1,5 +1,5 @@
 import { AIAnswer, ReactiveBase, SearchBox } from "@appbaseio/reactivesearch";
-import { Card, Container, ListGroup, Navbar } from "react-bootstrap";
+import { Card, Col, Container, ListGroup, Navbar, Row } from "react-bootstrap";
 import Fuse from "fuse.js";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -204,15 +204,23 @@ function App() {
                 <h3 className="bg-white p-2">Dialogues used for answer</h3>
                 <div>
                   {feedData.hits.map((item) => (
-                    <ListGroup.Item key={item.index} className="py-4 px-2">
-                      <div className="row">
-                        <div className="col-md-1 d-flex justify-content-center align-items-center">
+                    <ListGroup.Item
+                      key={item.index}
+                      className="py-4 px-2 container"
+                    >
+                      <Row>
+                        <Col
+                          md={1}
+                          sm={2}
+                          xs={3}
+                          className="d-flex justify-content-center align-items-center"
+                        >
                           <img
                             src={getCharacterIcon(item.name)}
-                            style={{ width: 40 }}
+                            style={{ width: "100%" }}
                           />
-                        </div>
-                        <div className="col-md-11">
+                        </Col>
+                        <Col md={11} sm={10} xs={9}>
                           <h1 className="h5">
                             {item.episode_name} - Season {item["season no."]} -
                             Episode {item["episode no."]}
@@ -220,8 +228,8 @@ function App() {
                           <div>
                             {item.name}: "{item.line}"
                           </div>
-                        </div>
-                      </div>
+                        </Col>
+                      </Row>
                     </ListGroup.Item>
                   ))}
                 </div>
