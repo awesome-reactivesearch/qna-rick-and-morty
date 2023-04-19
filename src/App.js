@@ -113,29 +113,32 @@ function App() {
           data,
           value: searchQuery,
         }) => {
-          const fuse = new Fuse(
-            questions.map((q) => ({
-              ...q,
-              question: q.episode
-                ? `${q.question.replace(/\?$/, "")} in "${q.episode}"?`
-                : q.question,
-            })),
-            { keys: ["question"] }
-          );
+          const modifiedQuestions = questions.map((q) => ({
+            ...q,
+            question: q.episode
+              ? `${q.question.replace(/\?$/, "")} in "${q.episode}"?`
+              : q.question,
+          }));
+          const fuse = new Fuse(modifiedQuestions, { keys: ["question"] });
           const filteredData = fuse.search(searchQuery).map((res) => ({
             value: res.item.question,
             episode: res.item.episode,
             idx: res.refIndex,
           }));
+          const defaultSuggestions = modifiedQuestions
+            .filter((q, i) => i < 5)
+            .map((item, i) => ({
+              value: item.question,
+              episode: item.episode,
+              idx: i,
+            }));
 
           return isOpen ? (
             <div className={`${styles.suggestions}`}>
               <div>
-                {filteredData.length ? (
-                  <p className={`bg-gray p-2 m-0 ${styles.suggestionHeading}`}>
-                    Try below suggestions
-                  </p>
-                ) : null}
+                <p className={`bg-gray p-2 m-0 ${styles.suggestionHeading}`}>
+                  Try below suggestions
+                </p>
                 {filteredData.length ? (
                   <div>
                     {filteredData.map((item, index) =>
@@ -164,7 +167,35 @@ function App() {
                       ) : null
                     )}
                   </div>
-                ) : null}
+                ) : (
+                  <div>
+                    {defaultSuggestions.map((item, index) =>
+                      index < 6 ? (
+                        <div
+                          /* eslint-disable-next-line react/no-array-index-key */
+                          key={item.idx}
+                          {...getItemProps({
+                            item,
+                          })}
+                          className={`${
+                            highlightedIndex === index
+                              ? styles.activeSuggestion
+                              : styles.suggestion
+                          } 
+                              ${
+                                selectedItem &&
+                                selectedItem.value === item.value
+                                  ? styles.selectedSuggestion
+                                  : ""
+                              }
+                              `}
+                        >
+                          <span className="clipText">{item.value}</span>
+                        </div>
+                      ) : null
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           ) : null;
