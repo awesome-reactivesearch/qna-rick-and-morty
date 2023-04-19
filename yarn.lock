@@ -19,17 +19,17 @@
     jsonpointer "^5.0.0"
     leven "^3.1.0"
 
-"@appbaseio/analytics@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@appbaseio/analytics/-/analytics-1.1.1.tgz#398ff80ad3d7d20bc0e66efc1c0b2c50bb2a959e"
-  integrity sha512-8ydvIbn9otjldUHKuYg48nqUvpdC4jMUl6BZNxTWniBnFi5ihxWI94cKabu2+L65uNJR3Aioa1FV0t6d4am2oQ==
+"@appbaseio/analytics@^1.2.0-alpha.1":
+  version "1.2.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/@appbaseio/analytics/-/analytics-1.2.0-alpha.1.tgz#786fce19ac03930aa8698aaf6929856c208778d6"
+  integrity sha512-IoRR71bah4w7LwgdokL7RVa67CX/CDmusNacupqOtFo8o81tA2w91Lq8NIpT1EVn3Cm3RD2TxzRJBs3Ls1nmGg==
   dependencies:
     cross-fetch "^3.0.4"
 
-"@appbaseio/reactivecore@10.0.0-alpha.10":
-  version "10.0.0-alpha.10"
-  resolved "https://registry.yarnpkg.com/@appbaseio/reactivecore/-/reactivecore-10.0.0-alpha.10.tgz#595923181a79b8c7a88d4dfd6b8a5951b8d821f7"
-  integrity sha512-cc5fTjsjPio8dzDHtfwh3KKkns3208lv1d+io+dd6qFrDKJsjBMSQUySQu/mj2ffTgJHlpc3J8HMgPQnWKyZ6A==
+"@appbaseio/reactivecore@10.0.0-alpha.11":
+  version "10.0.0-alpha.11"
+  resolved "https://registry.yarnpkg.com/@appbaseio/reactivecore/-/reactivecore-10.0.0-alpha.11.tgz#a7f86b77a962fd64d33e51af47f381c8d91505cc"
+  integrity sha512-6k4s7I3q6cD3vtkgvDhnI4vyh2/QWhbA7mJHdQPcSRzPobsfAH1WBfQ57d1xKP1DXQ7K++rAk0trT6ApH1Vu8A==
   dependencies:
     cross-fetch "^3.0.4"
     dayjs "^1.11.7"
@@ -37,13 +37,13 @@
     redux "^4.0.0"
     redux-thunk "^2.3.0"
 
-"@appbaseio/reactivesearch@4.0.0-rc.8":
-  version "4.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/@appbaseio/reactivesearch/-/reactivesearch-4.0.0-rc.8.tgz#476b2a7c3e5b9703e9b709c6dcbb8030aa93ed6e"
-  integrity sha512-bRf8SXdJr1I6Eu5SWejttPVQj1NrSDFtuM96wIlMWtvynsjpUTBLg5hw9j0FGJf+mbhLkX58GMc0Uu45j0pEgw==
+"@appbaseio/reactivesearch@4.0.0-rc.9":
+  version "4.0.0-rc.9"
+  resolved "https://registry.yarnpkg.com/@appbaseio/reactivesearch/-/reactivesearch-4.0.0-rc.9.tgz#82954c6e9a112fb289077f38abda4f84449aa6ac"
+  integrity sha512-/zHT+YivBDaY/i92rClUZTpsEMmRn8siZGwsKYqKx8WIZ8eCNjUeCx9aJSgEDr5CnungSrCpjW4rtzURFNQdAg==
   dependencies:
-    "@appbaseio/analytics" "^1.1.1"
-    "@appbaseio/reactivecore" "10.0.0-alpha.10"
+    "@appbaseio/analytics" "^1.2.0-alpha.1"
+    "@appbaseio/reactivecore" "10.0.0-alpha.11"
     "@appbaseio/rheostat" "^1.0.0-alpha.15"
     "@emotion/core" "^10.0.28"
     "@emotion/styled" "^10.0.27"
