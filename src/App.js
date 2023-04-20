@@ -19,7 +19,7 @@ function App() {
   return (
     <ReactiveBase
       app="rick-and-morty"
-      url="https://2ca5a5864025:12187bc6-44bc-4b3a-9683-80c18cff6312@appbase-demo-ansible-abxiydt-arc.searchbase.io"
+      url="https://a03a1cb71321:75b6603d-9456-4a5a-af6b-a487b309eb61@appbase-demo-ansible-abxiydt-arc.searchbase.io"
       theme={{
         typography: {
           fontFamily: "monospace",
