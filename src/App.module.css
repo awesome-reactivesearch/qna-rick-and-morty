@@ -52,6 +52,7 @@
 }
 .suggestions {
   position: absolute;
+  top: inherit;
   z-index: 2;
   box-shadow: #9597a1 0px 8px 24px;
   background: white;
