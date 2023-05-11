@@ -59,13 +59,15 @@ function App() {
 
             return {
               ...componentQuery,
-              customQuery: {
-                query: {
-                  term: {
-                    "episode_name.keyword": episode,
-                  },
-                },
-              },
+              customQuery: episode
+                ? {
+                    query: {
+                      term: {
+                        "episode_name.keyword": episode,
+                      },
+                    },
+                  }
+                : undefined,
             };
           }
           return componentQuery;

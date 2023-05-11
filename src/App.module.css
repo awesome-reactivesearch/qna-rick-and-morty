@@ -43,9 +43,6 @@
   width: 75vw;
   max-width: 500px;
 }
-.searchboxContainer input {
-  line-height: 2.5;
-}
 .answer {
   max-width: 800px;
   margin: auto;
@@ -57,8 +54,9 @@
   background: white;
   width: 100%;
   border-radius: 0px 0px 10px 10px;
-  overflow: hidden;
+  overflow: auto;
   font-size: 0.9rem;
+  max-height: 500px;
 }
 .suggestionHeading {
   font-size: 0.8rem;
