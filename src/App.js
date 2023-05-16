@@ -90,7 +90,9 @@ function App() {
           <span className={`text-white ${styles.headingTag}`}>
             Rick and morty
           </span>
-          <a href="/">How this is built</a>
+          <a href="https://hashnode.com/post/clhhn2fhs000b0aml57dbeuu5">
+            How this is built
+          </a>
         </Container>
       </Navbar>
       <SearchBox
