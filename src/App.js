@@ -217,7 +217,6 @@ function App() {
             topDocsForContext: 15,
           }}
           enterButton={true}
-          showInput={false}
           onData={({ loading, rawData, data }) => {
             if (!loading && data.length) {
               if (rawData.hits && rawData.hits.hits)
